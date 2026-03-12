@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <ul>
+        <li>
+            <input type="checkbox" class="status"><span>shopping</span>
+        </li>
+       <li>
+            <input type="checkbox" class="status"><span>cleaning</span>
+        </li>
+    </ul>
+
+
+
+
+    <script type="text/javascript">
+        /*Todolist qui afficher la liste qui afficher chaque tâche sous forme 
+        d un li (composé de checkbox et span(text))
+        si le checkbox est checked : la propriéte text-decoration de span prend la valeur line-through
+                                     sinon none*/
+
+        let allCk=document.querySelectorAll('input[type="checkbox"]');
+        for(let ck of allCk){
+            ck.addEventListener('change',function(e){
+                //this ou e.target
+               if(e.target.checked==true){
+                e.target.nextElementSibling.style.textDecoration='line-through';
+               }
+               else{
+                e.target.nextElementSibling.style.textDecoration='none';
+               }
+            });
+        }
+
+    </script>
+</body>
+</html>

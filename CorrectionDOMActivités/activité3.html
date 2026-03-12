@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="card">
+             <span id="c">Hello world</span>
+        </div>
+      
+    <script type="text/javascript">
+    /* 
+       objectif : récuperer la valeur de l'attribut class de
+        l'élément parent de span  
+    */
+      
+    //console.log(document.querySelector('#c').parentElement.nodeName);
+    console.log(document.querySelector('#c').parentElement.getAttribute('class'));
+    document.querySelector('#c').parentElement.style.backgroundColor='#AC2';
+    </script>
+</body>
+</html>

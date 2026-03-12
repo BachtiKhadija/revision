@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>item</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item5</li>
+    </ul>
+    <script type="text/javascript">
+    
+    let p=document.querySelector('#menu');
+    //let fils=p.children;//les fils de types balise
+    let fils=p.childNodes;//balise et text
+    for(let c of fils){
+        console.log(c.textContent);
+    }
+
+
+
+    </script>
+</body>
+</html>
