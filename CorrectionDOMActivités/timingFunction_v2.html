@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="timer"></span>
+
+
+    <script type="text/javascript">
+         function GetCTime(){
+                let now=new Date();
+                let c=`${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+                document.querySelector('#timer').textContent=c;
+         }
+
+        GetCTime();
+        setInterval(function(){GetCTime()},1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div>
+        <input type="text" id="task" onchange="addTask(event)">
+    </div>
+    <ul id="tasks"></ul>
+
+     <script type="text/javascript">
+        function addTask(e){
+          //let task=document.querySelector('#task').value;
+          //createElement and appendChild
+          let newItem=document.createElement('li');
+          newItem.textContent=e.target.value;
+          newItem.classList.add('h-3');
+          e.target.value='';
+          e.target.focus();
+          newItem.onclick=function(e){
+           // e.target.remove();
+            e.target.style.textDecoration= e.target.style.textDecoration=='none'?'line-through':'none';
+          }
+        //  document.querySelector('#tasks').appendChild(newItem);
+       document.querySelector('#tasks').insertAdjacentElement('beforeend',newItem);
+       //position : beforebegin ,afterbegin , beforeend ,afterend
+    
+    }
+  
+     </script>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+          /*setTimeout(function(){
+            document.querySelector('body').style.backgroundColor='lightblue';
+          },1000)*/
+
+          function getRandomColor(){
+             const c=Array.from('0123456789ABCDEF');
+             let color='#';
+             for(let i=0;i<6;i++){
+                let pos=Math.floor(Math.random()*16);
+                color+=c[pos];
+             }
+             return color;
+          }
+          
+       setInterval(function(){
+        document.querySelector('body').style.backgroundColor=getRandomColor();
+       },3000);
+
+
+    </script>
+</body>
+</html>

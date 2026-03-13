@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>Lorem.</li>
+        <li>Quod!</li>
+        <li>Omnis.</li>
+        <li>Magni?</li>
+    </ul>
+    
+    <script type="text/javascript">
+        //get all li
+        let allLi=document.querySelectorAll('li');
+        console.log(typeof allLi);
+        allLi.forEach(function(elt,pos){
+            elt.style.backgroundColor=pos&1==1?"lightblue":"lightgray";
+        });
+
+
+    </script>
+</body>
+</html>

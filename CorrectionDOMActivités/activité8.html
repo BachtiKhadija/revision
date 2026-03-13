@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <img src="../images/image1.png" id="nature" width="200px" height="200px" alt=""><br>
+      <button type="button" onclick="changeImage()">ChangeImage</button>
+       <script type="text/javascript">
+          const images=['../images/image1.png','../images/image2.png','../images/image3.png','../images/image4.png'];
+             
+          function changeImage(){
+            let dim=images.length;
+            let pos=Math.floor(Math.random()*dim);
+            document.querySelector('#nature').setAttribute('src',images[pos]);
+          }
+
+
+
+       </script>
+</body>
+</html>
